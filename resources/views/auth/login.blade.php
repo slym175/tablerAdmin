@@ -1,10 +1,11 @@
 @extends('layouts.admin', ['isAuthView' => true])
 
+@section('title', 'Sign in')
 @section('content')
     <div class="container-tight py-4">
         <div class="text-center mb-4">
             <a href="{{ route('home') }}" class="navbar-brand navbar-brand-autodark">
-                <h1 class="m-0">Admin Panel</h1>
+                <h1 class="m-0"><i class="far fa-chart-network"></i>{{ config('app.name') }}</h1>
             </a>
         </div>
         <form class="card card-md" method="POST" action="{{ route('login') }}" autocomplete="off">
@@ -64,7 +65,7 @@
             </div>
         </form>
         <div class="text-center text-muted mt-3">
-            Don't have account yet? <a href="{{ route('login') }}" tabindex="-1">Sign up</a>
+            Don't have account yet? <a href="{{ route('register') }}" tabindex="-1">Sign up</a>
         </div>
     </div>
 @endsection
