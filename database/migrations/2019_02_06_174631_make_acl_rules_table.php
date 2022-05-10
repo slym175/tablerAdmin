@@ -14,8 +14,8 @@ class MakeAclRulesTable extends Migration
     public function up()
     {
         Schema::create('acl_rules', function (Blueprint $table) {
-            $table->increments('id');
-            $table->unsignedInteger('user_id')->nullable();
+            $table->id();
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->string('disk');
             $table->string('path');
             $table->tinyInteger('access');

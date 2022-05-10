@@ -71,7 +71,9 @@
     let ngTablerApp = angular.module('ngTablerApp', [], ($interpolateProvider) => {
         $interpolateProvider.startSymbol('<%');
         $interpolateProvider.endSymbol('%>');
-    })
+    }).constant('ngAppConfig', {
+        pathAssets: location.origin,
+    });
 </script>
 <script type="text/javascript" src="{{ asset('tabler/angularjs/ngTablerGlobalServices.js') }}"></script>
 @stack('js')

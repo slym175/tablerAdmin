@@ -61,11 +61,19 @@
                         <span class="nav-link-title">Dashboard</span>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('app.admin.media-center') }}">
+                        <span class="nav-link-icon d-md-none d-lg-inline-block">
+                            <i class="fa fa-archive"></i>
+                        </span>
+                        <span class="nav-link-title">Media Center</span>
+                    </a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-bs-toggle="dropdown"
                        data-bs-auto-close="false" role="button" aria-expanded="true">
                         <span class="nav-link-icon d-md-none d-lg-inline-block">
-                            <i class="fa fa-home"></i>
+                            <i class="fa fa-user"></i>
                         </span>
                         <span class="nav-link-title">User Manager</span>
                     </a>

@@ -3,8 +3,9 @@ Breadcrumbs::for('dashboard', function ($trail) {
     $trail->push('Dashboard', route('app.admin.dashboard'));
 });
 
-Breadcrumbs::for('filemanager', function ($trail) {
-    $trail->push('File Manager', route('app.admin.filemanager'));
+Breadcrumbs::for('media-center', function ($trail) {
+    $trail->parent('dashboard');
+    $trail->push('Media Center', route('app.admin.media-center'));
 });
 
 Breadcrumbs::for('user', function ($trail) {

@@ -18,6 +18,7 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 Route::group(['prefix' => 'admin', 'as' => 'app.admin.', 'middleware' => ['auth']], function () {
     Route::get('/', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/media-center', [App\Http\Controllers\Admin\MediaCenterController::class, 'index'])->name('media-center');
     Route::resource('user', 'App\Http\Controllers\Admin\UserController');
 
     // Role Routes
